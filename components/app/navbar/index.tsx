@@ -42,16 +42,16 @@ export default function AppNavbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" onClick={closeMenu}>
               <Image
                 src={Logo}
                 alt="MSL Logo"
-                width={180}
-                height={60}
-                className="h-12 w-auto"
+                width={120}
+                height={40}
+                className="h-8 w-auto"
               />
             </Link>
           </div>
@@ -62,8 +62,8 @@ export default function AppNavbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-gray-700 hover:text-msl-navy transition-colors font-medium ${
-                  pathname === item.href ? "text-msl-navy" : ""
+                className={`text-gray-700 hover:text-gray-900 transition-colors font-medium ${
+                  pathname === item.href ? "text-gray-900" : ""
                 }`}
               >
                 {item.name}
@@ -73,7 +73,7 @@ export default function AppNavbar() {
             {/* Language Switcher */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="gap-2">
+                <Button variant="ghost" size="sm" className="gap-2">
                   <Globe className="h-4 w-4" />
                   {locale === "id" ? "ID" : "EN"}
                 </Button>
@@ -97,9 +97,8 @@ export default function AppNavbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button className="bg-msl-navy hover:bg-msl-dark-blue text-white">
+              <Button className="bg-gray-900 hover:bg-gray-800 text-white">
                 {t("common.contact_us")}
-                <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
           </div>
@@ -111,7 +110,7 @@ export default function AppNavbar() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-msl-navy hover:bg-msl-navy/10"
+                  className="text-gray-700 hover:bg-gray-100"
                 >
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Open menu</span>
@@ -123,9 +122,9 @@ export default function AppNavbar() {
                     <Image
                       src={Logo}
                       alt="MSL Logo"
-                      width={150}
-                      height={50}
-                      className="h-10 w-auto"
+                      width={120}
+                      height={40}
+                      className="h-8 w-auto"
                     />
                   </SheetTitle>
                 </SheetHeader>
@@ -140,8 +139,8 @@ export default function AppNavbar() {
                         onClick={closeMenu}
                         className={`text-lg font-medium transition-colors py-2 px-3 rounded-lg ${
                           pathname === item.href
-                            ? "text-msl-navy bg-msl-navy/10"
-                            : "text-gray-700 hover:text-msl-navy hover:bg-gray-50"
+                            ? "text-gray-900 bg-gray-100"
+                            : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                         }`}
                       >
                         {item.name}
@@ -161,7 +160,7 @@ export default function AppNavbar() {
                         onClick={closeMenu}
                         className={`flex items-center space-x-3 py-2 px-3 rounded-lg transition-colors ${
                           locale === "id"
-                            ? "text-msl-navy bg-msl-navy/10"
+                            ? "text-gray-900 bg-gray-100"
                             : "text-gray-700 hover:bg-gray-50"
                         }`}
                       >
@@ -174,7 +173,7 @@ export default function AppNavbar() {
                         onClick={closeMenu}
                         className={`flex items-center space-x-3 py-2 px-3 rounded-lg transition-colors ${
                           locale === "en"
-                            ? "text-msl-navy bg-msl-navy/10"
+                            ? "text-gray-900 bg-gray-100"
                             : "text-gray-700 hover:bg-gray-50"
                         }`}
                       >
@@ -192,9 +191,8 @@ export default function AppNavbar() {
                       rel="noopener noreferrer"
                       onClick={closeMenu}
                     >
-                      <Button className="w-full bg-msl-navy hover:bg-msl-dark-blue text-white">
+                      <Button className="w-full bg-gray-900 hover:bg-gray-800 text-white">
                         {t("common.contact_us")}
-                        <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>
                     </Link>
                   </div>
