@@ -89,7 +89,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section - Minimalist with MSL Colors */}
-      <section className="relative min-h-screen flex items-center bg-white">
+      <section className="relative min-h-screen flex items-center bg-white pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8" data-aos="fade-right">
