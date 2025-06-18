@@ -88,13 +88,13 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero Section - Minimalist */}
+      {/* Hero Section - Minimalist with MSL Colors */}
       <section className="relative min-h-screen flex items-center bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8" data-aos="fade-right">
               <div className="space-y-6">
-                <H1 text={t("home.hero.title")} size="xl" className="text-gray-900" />
+                <H1 text={t("home.hero.title")} size="xl" />
                 <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
                   {t("home.hero.subtitle")}
                 </p>
@@ -107,7 +107,7 @@ export default function Home() {
                 >
                   <Button
                     size="lg"
-                    className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3"
+                    className="bg-msl-navy hover:bg-msl-dark-blue text-white px-8 py-3"
                   >
                     {t("home.hero.cta_primary")}
                   </Button>
@@ -116,7 +116,7 @@ export default function Home() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-gray-300 text-gray-700 hover:bg-gray-50 px-8 py-3"
+                    className="border-msl-navy text-msl-navy hover:bg-msl-navy hover:text-white px-8 py-3"
                   >
                     {t("common.learn_more")}
                   </Button>
@@ -124,7 +124,7 @@ export default function Home() {
               </div>
             </div>
             <div className="relative" data-aos="fade-left">
-              <div className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
+              <div className="aspect-[4/3] bg-gray-50 rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=800"
                   alt="Logistics Operations"
@@ -136,24 +136,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section - Minimalist */}
+      {/* Stats Section - Clean with MSL Colors */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-3 gap-8 text-center">
             <div data-aos="fade-up" data-aos-delay="0">
-              <div className="text-4xl font-bold text-gray-900 mb-2">
+              <div className="text-4xl font-bold text-msl-navy mb-2">
                 {siteConfig.company.experience}
               </div>
               <div className="text-gray-600">{t("home.hero.stats.experience")}</div>
             </div>
             <div data-aos="fade-up" data-aos-delay="100">
-              <div className="text-4xl font-bold text-gray-900 mb-2">
+              <div className="text-4xl font-bold text-msl-orange mb-2">
                 {siteConfig.company.clients}
               </div>
               <div className="text-gray-600">{t("home.hero.stats.clients")}</div>
             </div>
             <div data-aos="fade-up" data-aos-delay="200">
-              <div className="text-4xl font-bold text-gray-900 mb-2">
+              <div className="text-4xl font-bold text-msl-brown mb-2">
                 {siteConfig.company.satisfaction}
               </div>
               <div className="text-gray-600">{t("home.hero.stats.satisfaction")}</div>
@@ -162,11 +162,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section - Minimalist Grid */}
+      {/* Services Section - Clean Grid with MSL Colors */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16" data-aos="fade-up">
-            <H1 text={t("home.services.title")} size="lg" className="text-gray-900" />
+            <H1 text={t("home.services.title")} size="lg" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {t("home.services.subtitle")}
             </p>
@@ -179,15 +179,15 @@ export default function Home() {
               return (
                 <Card
                   key={service.id}
-                  className="group hover:shadow-lg transition-all duration-300 border-gray-200 bg-white p-6"
+                  className="group hover:shadow-xl transition-all duration-300 border-gray-200 bg-white p-6"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
                   <div className="space-y-4">
-                    <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-gray-900 transition-colors">
-                      <IconComponent className="h-6 w-6 text-gray-600 group-hover:text-white transition-colors" />
+                    <div className="w-12 h-12 bg-msl-orange/10 rounded-xl flex items-center justify-center group-hover:bg-msl-orange transition-colors">
+                      <IconComponent className="h-6 w-6 text-msl-orange group-hover:text-white transition-colors" />
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900">
+                    <h3 className="text-xl font-semibold text-msl-navy">
                       {service.title}
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
@@ -203,7 +203,7 @@ export default function Home() {
             <Link href="/services">
               <Button
                 size="lg"
-                className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3"
+                className="bg-msl-navy hover:bg-msl-dark-blue text-white px-8 py-3"
               >
                 {t("home.services.cta")}
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -217,7 +217,7 @@ export default function Home() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16" data-aos="fade-up">
-            <H1 text="Our *Operations* Gallery" size="lg" className="text-gray-900" />
+            <H1 text="Our *Operations* Gallery" size="lg" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Take a look at our modern facilities and operations
             </p>
@@ -227,29 +227,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section - Minimalist */}
+      {/* About Section - Clean with MSL Colors */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8" data-aos="fade-right">
               <div className="space-y-4">
-                <H1 text={t("home.about.title")} size="lg" className="text-gray-900" />
+                <H1 text={t("home.about.title")} size="lg" />
                 <p className="text-lg text-gray-600 leading-relaxed">
                   {t("home.about.subtitle")}
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-6">
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <div className="text-3xl font-bold text-gray-900 mb-2">
+                <div className="bg-gray-50 p-6 rounded-xl">
+                  <div className="text-3xl font-bold text-msl-navy mb-2">
                     {siteConfig.company.experience}
                   </div>
                   <div className="text-sm text-gray-600">
                     {t("home.about.stats.experience")}
                   </div>
                 </div>
-                <div className="bg-gray-50 p-6 rounded-lg">
-                  <div className="text-3xl font-bold text-gray-900 mb-2">
+                <div className="bg-gray-50 p-6 rounded-xl">
+                  <div className="text-3xl font-bold text-msl-orange mb-2">
                     {siteConfig.company.clients}
                   </div>
                   <div className="text-sm text-gray-600">
@@ -259,7 +259,7 @@ export default function Home() {
               </div>
 
               <Link href="/about">
-                <Button className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3">
+                <Button className="bg-msl-navy hover:bg-msl-dark-blue text-white px-8 py-3">
                   {t("home.about.cta")}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -267,7 +267,7 @@ export default function Home() {
             </div>
 
             <div className="relative" data-aos="fade-left">
-              <div className="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden">
+              <div className="aspect-[4/3] bg-gray-50 rounded-2xl overflow-hidden shadow-xl">
                 <img
                   src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800"
                   alt="Warehouse Operations"
@@ -279,8 +279,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section - Minimalist */}
-      <section className="py-24 bg-gray-900">
+      {/* Contact Section - MSL Navy Background */}
+      <section className="py-24 bg-msl-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8" data-aos="fade-right">
@@ -293,8 +293,8 @@ export default function Home() {
 
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-gray-900" />
+                  <div className="w-12 h-12 bg-msl-orange rounded-xl flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-white" />
                   </div>
                   <div>
                     <div className="font-semibold text-white">
@@ -306,8 +306,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-                    <Mail className="h-6 w-6 text-gray-900" />
+                  <div className="w-12 h-12 bg-msl-orange rounded-xl flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-white" />
                   </div>
                   <div>
                     <div className="font-semibold text-white">
@@ -324,7 +324,7 @@ export default function Home() {
                 <Link href="/contact">
                   <Button
                     size="lg"
-                    className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-3"
+                    className="bg-msl-orange hover:bg-msl-orange/90 text-white px-8 py-3"
                   >
                     <Phone className="mr-2 h-5 w-5" />
                     {t("home.contact.cta_primary")}
@@ -335,7 +335,7 @@ export default function Home() {
 
             <Card className="bg-white" data-aos="fade-left">
               <CardHeader>
-                <CardTitle className="text-2xl text-gray-900">
+                <CardTitle className="text-2xl text-msl-navy">
                   {t("home.contact.form_title")}
                 </CardTitle>
                 <CardDescription>

@@ -62,8 +62,8 @@ export default function AppNavbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-gray-700 hover:text-gray-900 transition-colors font-medium ${
-                  pathname === item.href ? "text-gray-900" : ""
+                className={`text-gray-700 hover:text-msl-navy transition-colors font-medium ${
+                  pathname === item.href ? "text-msl-navy" : ""
                 }`}
               >
                 {item.name}
@@ -97,7 +97,7 @@ export default function AppNavbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button className="bg-gray-900 hover:bg-gray-800 text-white">
+              <Button className="bg-msl-navy hover:bg-msl-dark-blue text-white">
                 {t("common.contact_us")}
               </Button>
             </Link>
@@ -110,7 +110,7 @@ export default function AppNavbar() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="text-gray-700 hover:bg-gray-100"
+                  className="text-msl-navy hover:bg-msl-navy/10"
                 >
                   <Menu className="h-6 w-6" />
                   <span className="sr-only">Open menu</span>
@@ -139,8 +139,8 @@ export default function AppNavbar() {
                         onClick={closeMenu}
                         className={`text-lg font-medium transition-colors py-2 px-3 rounded-lg ${
                           pathname === item.href
-                            ? "text-gray-900 bg-gray-100"
-                            : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                            ? "text-msl-navy bg-msl-navy/10"
+                            : "text-gray-700 hover:text-msl-navy hover:bg-gray-50"
                         }`}
                       >
                         {item.name}
@@ -160,7 +160,7 @@ export default function AppNavbar() {
                         onClick={closeMenu}
                         className={`flex items-center space-x-3 py-2 px-3 rounded-lg transition-colors ${
                           locale === "id"
-                            ? "text-gray-900 bg-gray-100"
+                            ? "text-msl-navy bg-msl-navy/10"
                             : "text-gray-700 hover:bg-gray-50"
                         }`}
                       >
@@ -173,7 +173,7 @@ export default function AppNavbar() {
                         onClick={closeMenu}
                         className={`flex items-center space-x-3 py-2 px-3 rounded-lg transition-colors ${
                           locale === "en"
-                            ? "text-gray-900 bg-gray-100"
+                            ? "text-msl-navy bg-msl-navy/10"
                             : "text-gray-700 hover:bg-gray-50"
                         }`}
                       >
@@ -191,7 +191,7 @@ export default function AppNavbar() {
                       rel="noopener noreferrer"
                       onClick={closeMenu}
                     >
-                      <Button className="w-full bg-gray-900 hover:bg-gray-800 text-white">
+                      <Button className="w-full bg-msl-navy hover:bg-msl-dark-blue text-white">
                         {t("common.contact_us")}
                       </Button>
                     </Link>
